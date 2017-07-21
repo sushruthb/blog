@@ -21,7 +21,8 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',  RedirectView.as_view(url='/exampleforms/', permanent=True)),
+    #url(r'^$',  RedirectView.as_view(url='/exampleforms/', permanent=True)),
+    url(r'^$',  RedirectView.as_view(url='/blog/', permanent=True)),
 ]
 urlpatterns += [
     url(r'^exampleforms/', include('exampleforms.urls')),
